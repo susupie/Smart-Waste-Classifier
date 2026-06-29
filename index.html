@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Waste Classifier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <div class="page-header">
+    <div class="brand-pill">AI-powered waste sorting</div>
+    <h1>Smart Waste Classifier</h1>
+    <p class="tagline">A soft pastel identity with a glass-like interface for smarter sorting.</p>
+  </div>
+
+  <div class="card-grid">
+    <section class="card upload-card">
+      <div class="card-title">
+        <i class="bi bi-card-image"></i>
+        Upload Photo
+      </div>
+      <div class="input-group">
+        <div>Image file</div>
+        <div class="file-input-wrapper">
+          <input type="file" id="upload" accept="image/*" onchange="predictUpload(event)">
+          <label for="upload" class="file-label">
+            <i class="bi bi-image"></i> Choose Image
+          </label>
+        </div>
+      </div>
+      <div class="preview-card">
+        <div class="preview-toolbar">
+          <span>Photo Preview</span>
+          <button type="button" class="btn-remove-photo" onclick="removePhoto()">
+            <i class="bi bi-trash"></i> Remove
+          </button>
+        </div>
+        <div id="image-preview">
+          <span class="preview-placeholder">Upload a photo to preview it here.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card capture-card">
+      <div class="card-title">
+        <i class="bi bi-camera-video"></i>
+        Live Capture
+      </div>
+      <div class="input-group">
+        <div>Webcam</div>
+        <button type="button" class="btn-start" onclick="initWebcam()">
+          <i class="bi bi-play-circle"></i> Start Webcam
+        </button>
+        <button type="button" class="btn-stop" onclick="stopWebcam()">
+          <i class="bi bi-stop-circle"></i> Stop Webcam
+        </button>
+      </div>
+      <div id="webcam-container"></div>
+    </section>
+
+    <section class="card result-card">
+      <div class="card-title">
+        <i class="bi bi-graph-up"></i>
+        Results
+      </div>
+      <div class="results-container">
+        <p id="result">Waiting for model to load...</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
