@@ -358,3 +358,139 @@ button:hover,
     height: 240px;
   }
 }
+
+.site-footer {
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  padding: 0 18px 18px;
+}
+
+.footer-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(84, 76, 141, 0.08);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 14px 18px;
+  align-items: flex-start;
+}
+
+.footer-column {
+  color: rgba(43, 39, 64, 0.85);
+}
+
+.footer-title {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #4c3f82;
+}
+
+.footer-column p,
+.footer-column .footer-note {
+  margin: 0 0 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-note-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.footer-tm-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+}
+
+.footer-list li {
+  margin: 4px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(43, 39, 64, 0.87);
+  display: flex;
+  align-items: center;
+}
+
+.footer-column i,
+.footer-list-icon,
+.footer-item-icon {
+  margin-right: 10px;
+  color: #5e71ff;
+  font-size: 13px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-bottom {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 22px;
+  border-top: 1px solid rgba(76, 63, 137, 0.08);
+  font-size: 13px;
+  color: rgba(43, 39, 64, 0.72);
+}
+
+.footer-bottom-left p {
+  margin: 0;
+}
+
+.teachable-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(37, 96, 227, 0.1);
+  border: 1px solid rgba(37, 96, 227, 0.15);
+  color: #1b4bbf;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+.teachable-logo span {
+  margin: 0 1px;
+}
+
+@media (max-width: 780px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
